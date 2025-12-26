@@ -1,0 +1,476 @@
+/* =====================================================
+   LeadGen CMS - Enhanced Mobile Responsive Styles
+   Additional improvements for better mobile experience
+   ===================================================== */
+
+/* =====================================================
+   Mobile-First Improvements
+   ===================================================== */
+
+/* Better Touch Targets */
+@media (max-width: 768px) {
+    /* Enhanced button spacing */
+    .btn {
+        padding: 14px 20px;
+        min-height: 48px;
+    }
+    
+    /* Better form inputs */
+    .form-input,
+    .form-select,
+    .form-textarea {
+        padding: 14px 16px;
+        font-size: 16px; /* Prevent iOS zoom */
+        min-height: 48px;
+    }
+    
+    /* Larger checkboxes */
+    .custom-checkbox .checkmark {
+        width: 22px;
+        height: 22px;
+    }
+    
+    /* Action buttons */
+    .action-btn {
+        width: 40px;
+        height: 40px;
+    }
+    
+    /* Filter tabs scrollable */
+    .filter-tabs {
+        display: flex;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        padding-bottom: 4px;
+    }
+    
+    .filter-tabs::-webkit-scrollbar {
+        display: none;
+    }
+    
+    .filter-tab {
+        flex-shrink: 0;
+        padding: 10px 14px;
+    }
+    
+    /* Lead info in table */
+    .lead-info {
+        min-width: 180px;
+    }
+    
+    .lead-info img {
+        width: 36px;
+        height: 36px;
+    }
+    
+    /* Status badges */
+    .status-badge {
+        padding: 6px 10px;
+        font-size: 11px;
+    }
+    
+    /* Source tags */
+    .source-tag {
+        padding: 4px 8px;
+        font-size: 11px;
+    }
+}
+
+/* =====================================================
+   Tablet Specific Improvements
+   ===================================================== */
+@media (min-width: 769px) and (max-width: 992px) {
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .charts-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .capture-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .api-settings-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .sources-grid {
+        gap: 24px;
+    }
+    
+    .source-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* =====================================================
+   Small Phone Specific (< 375px)
+   ===================================================== */
+@media (max-width: 375px) {
+    .page-container {
+        padding: 12px;
+    }
+    
+    .page-title {
+        font-size: 18px;
+    }
+    
+    .page-subtitle {
+        font-size: 12px;
+    }
+    
+    .stat-card {
+        padding: 12px;
+    }
+    
+    .stat-value {
+        font-size: 20px;
+    }
+    
+    .stat-label {
+        font-size: 11px;
+    }
+    
+    .btn {
+        padding: 12px 16px;
+        font-size: 13px;
+    }
+    
+    .modal-content {
+        width: 98%;
+        margin: 8px;
+    }
+    
+    .modal-header,
+    .modal-body,
+    .modal-footer {
+        padding: 12px;
+    }
+    
+    .toast {
+        min-width: unset;
+        margin: 0 8px;
+    }
+}
+
+/* =====================================================
+   Improved Scraper Page Mobile
+   ===================================================== */
+@media (max-width: 768px) {
+    .scraper-container {
+        padding: 0;
+    }
+    
+    .scraper-form-card {
+        padding: 20px;
+        border-radius: 16px;
+    }
+    
+    .scraper-form .form-row {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+    
+    .scraper-results {
+        margin-top: 20px;
+    }
+    
+    .results-header {
+        flex-direction: column;
+        gap: 12px;
+        align-items: stretch;
+    }
+    
+    .results-header .btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* =====================================================
+   Improved API Settings Page Mobile
+   ===================================================== */
+@media (max-width: 768px) {
+    .api-settings-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+    
+    .api-card {
+        padding: 20px;
+    }
+    
+    .api-card-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+    
+    .api-info {
+        margin-bottom: 8px;
+    }
+}
+
+/* =====================================================
+   Improved Lead Sources Page Mobile
+   ===================================================== */
+@media (max-width: 768px) {
+    .sources-grid {
+        gap: 24px;
+    }
+    
+    .source-category {
+        padding: 0;
+    }
+    
+    .source-cards {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+    
+    .source-card {
+        padding: 16px;
+    }
+    
+    .source-card-icon {
+        width: 44px;
+        height: 44px;
+    }
+}
+
+/* =====================================================
+   Improved Lead Capture Page Mobile
+   ===================================================== */
+@media (max-width: 768px) {
+    .capture-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .capture-card {
+        padding: 20px;
+    }
+    
+    .capture-card.full-width {
+        grid-column: 1;
+    }
+    
+    .code-block {
+        font-size: 12px;
+    }
+    
+    .code-block pre {
+        padding: 12px;
+        overflow-x: auto;
+    }
+}
+
+/* =====================================================
+   Safe Area Insets for iPhone X and newer
+   ===================================================== */
+@supports (padding: max(0px)) {
+    .sidebar {
+        padding-bottom: max(16px, env(safe-area-inset-bottom));
+    }
+    
+    .page-container {
+        padding-bottom: max(20px, env(safe-area-inset-bottom));
+    }
+    
+    .toast-container {
+        bottom: max(24px, env(safe-area-inset-bottom));
+    }
+    
+    .modal-footer {
+        padding-bottom: max(16px, env(safe-area-inset-bottom));
+    }
+}
+
+/* =====================================================
+   Better Loading States
+   ===================================================== */
+.loading-skeleton {
+    background: linear-gradient(90deg, 
+        var(--bg-glass) 25%, 
+        var(--bg-glass-hover) 50%, 
+        var(--bg-glass) 75%
+    );
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+    border-radius: 8px;
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -200% 0;
+    }
+    100% {
+        background-position: 200% 0;
+    }
+}
+
+.loading-spinner {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--border-color);
+    border-top-color: var(--color-primary-500);
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* =====================================================
+   Swipe Gestures Hint
+   ===================================================== */
+@media (max-width: 768px) {
+    .swipe-hint {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        padding: 8px;
+        font-size: 12px;
+        color: var(--text-muted);
+        background: var(--bg-glass);
+        border-bottom: 1px solid var(--border-color);
+    }
+    
+    .swipe-hint i {
+        animation: swipeHint 1.5s ease-in-out infinite;
+    }
+    
+    @keyframes swipeHint {
+        0%, 100% { transform: translateX(-5px); }
+        50% { transform: translateX(5px); }
+    }
+}
+
+/* =====================================================
+   Dark Mode Enhancements
+   ===================================================== */
+[data-theme="dark"] {
+    color-scheme: dark;
+}
+
+[data-theme="light"] {
+    color-scheme: light;
+    
+    .stat-card {
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    }
+    
+    .leads-container {
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    }
+    
+    .modal-content {
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+    }
+}
+
+/* =====================================================
+   Focus Visible Improvements
+   ===================================================== */
+:focus-visible {
+    outline: 2px solid var(--color-primary-500);
+    outline-offset: 2px;
+}
+
+.btn:focus-visible,
+.nav-link:focus-visible,
+.form-input:focus-visible,
+.form-select:focus-visible {
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.3);
+}
+
+/* =====================================================
+   Smooth Scroll Behavior
+   ===================================================== */
+html {
+    scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
+
+/* =====================================================
+   Better Empty States
+   ===================================================== */
+.empty-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.empty-state-icon {
+    width: 80px;
+    height: 80px;
+    background: var(--bg-glass);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.empty-state-icon i {
+    font-size: 32px;
+    color: var(--text-muted);
+}
+
+.empty-state-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+}
+
+.empty-state-desc {
+    font-size: 14px;
+    color: var(--text-muted);
+    max-width: 300px;
+}
+
+/* =====================================================
+   Pull to Refresh Indicator (for future PWA)
+   ===================================================== */
+.pull-to-refresh {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-primary);
+    transform: translateY(-100%);
+    transition: transform 0.3s ease;
+    z-index: 1000;
+}
+
+.pull-to-refresh.active {
+    transform: translateY(0);
+}
+
+.pull-to-refresh i {
+    font-size: 24px;
+    color: var(--color-primary-500);
+    animation: spin 1s linear infinite;
+}

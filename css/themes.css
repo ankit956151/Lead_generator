@@ -1,0 +1,685 @@
+/* =====================================================
+   LeadGen CMS - Theme Enhancements
+   Ensures proper dark/light mode support across all components
+   ===================================================== */
+
+/* =====================================================
+   Light Theme - Complete Override
+   ===================================================== */
+[data-theme="light"] {
+    /* Backgrounds */
+    --bg-primary: #f8fafc;
+    --bg-secondary: #ffffff;
+    --bg-tertiary: #f1f5f9;
+    --bg-card: rgba(255, 255, 255, 0.95);
+    --bg-card-hover: rgba(255, 255, 255, 1);
+    --bg-glass: rgba(15, 23, 42, 0.03);
+    --bg-glass-hover: rgba(15, 23, 42, 0.06);
+
+    /* Text */
+    --text-primary: #0f172a;
+    --text-secondary: #475569;
+    --text-tertiary: #64748b;
+    --text-muted: #94a3b8;
+
+    /* Borders */
+    --border-color: rgba(15, 23, 42, 0.1);
+    --border-color-light: rgba(15, 23, 42, 0.15);
+    --border-color-active: rgba(99, 102, 241, 0.5);
+
+    /* Shadows - Lighter for light mode */
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.08), 0 2px 4px -1px rgba(0, 0, 0, 0.04);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -2px rgba(0, 0, 0, 0.04);
+    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    --shadow-glow: 0 0 20px rgba(99, 102, 241, 0.15);
+    --shadow-glow-lg: 0 0 40px rgba(99, 102, 241, 0.2);
+
+    /* Gradient modifications for light mode */
+    --gradient-dark: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+    --gradient-glow: radial-gradient(circle at 50% 50%, rgba(99, 102, 241, 0.08) 0%, transparent 50%);
+    --gradient-hero: linear-gradient(180deg, rgba(99, 102, 241, 0.05) 0%, transparent 50%);
+}
+
+/* =====================================================
+   Top Header - Theme Support
+   ===================================================== */
+.top-header {
+    background: var(--bg-secondary);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+}
+
+[data-theme="dark"] .top-header {
+    background: rgba(15, 15, 26, 0.85);
+}
+
+[data-theme="light"] .top-header {
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: var(--shadow-sm);
+}
+
+/* =====================================================
+   Sidebar - Theme Support
+   ===================================================== */
+[data-theme="light"] .sidebar {
+    background: #ffffff;
+    border-right-color: var(--border-color);
+}
+
+[data-theme="light"] .sidebar-header {
+    border-bottom-color: var(--border-color);
+}
+
+[data-theme="light"] .sidebar-footer {
+    border-top-color: var(--border-color);
+}
+
+[data-theme="light"] .logo-text {
+    color: #0f172a;
+}
+
+[data-theme="light"] .logo-text .accent {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* =====================================================
+   Navigation - Theme Support
+   ===================================================== */
+[data-theme="light"] .nav-link {
+    color: #475569;
+}
+
+[data-theme="light"] .nav-link:hover {
+    background: rgba(99, 102, 241, 0.08);
+    color: #0f172a;
+}
+
+[data-theme="light"] .nav-item.active .nav-link {
+    background: rgba(99, 102, 241, 0.12);
+    color: #4f46e5;
+}
+
+[data-theme="light"] .nav-section-title {
+    color: #94a3b8;
+}
+
+/* =====================================================
+   Cards - Theme Support
+   ===================================================== */
+[data-theme="light"] .stat-card,
+[data-theme="light"] .chart-card,
+[data-theme="light"] .content-card,
+[data-theme="light"] .card {
+    background: #ffffff;
+    border-color: rgba(15, 23, 42, 0.08);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+[data-theme="light"] .stat-card:hover,
+[data-theme="light"] .chart-card:hover,
+[data-theme="light"] .card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    border-color: rgba(99, 102, 241, 0.2);
+}
+
+[data-theme="light"] .glass-card {
+    background: rgba(255, 255, 255, 0.7);
+}
+
+/* =====================================================
+   Buttons - Theme Support
+   ===================================================== */
+[data-theme="light"] .btn-outline {
+    background: transparent;
+    color: #0f172a;
+    border-color: rgba(15, 23, 42, 0.2);
+}
+
+[data-theme="light"] .btn-outline:hover {
+    background: rgba(99, 102, 241, 0.08);
+    border-color: var(--color-primary-500);
+    color: var(--color-primary-600);
+}
+
+[data-theme="light"] .btn-ghost {
+    background: rgba(15, 23, 42, 0.04);
+    color: #0f172a;
+}
+
+[data-theme="light"] .btn-ghost:hover {
+    background: rgba(15, 23, 42, 0.08);
+}
+
+[data-theme="light"] .header-btn {
+    background: rgba(15, 23, 42, 0.04);
+    border-color: rgba(15, 23, 42, 0.1);
+    color: #475569;
+}
+
+[data-theme="light"] .header-btn:hover {
+    background: rgba(99, 102, 241, 0.1);
+    color: var(--color-primary-600);
+    border-color: rgba(99, 102, 241, 0.3);
+}
+
+/* =====================================================
+   Form Inputs - Theme Support
+   ===================================================== */
+[data-theme="light"] .form-input,
+[data-theme="light"] .form-select,
+[data-theme="light"] .form-textarea {
+    background: #ffffff;
+    border-color: rgba(15, 23, 42, 0.15);
+    color: #0f172a;
+}
+
+[data-theme="light"] .form-input:focus,
+[data-theme="light"] .form-select:focus,
+[data-theme="light"] .form-textarea:focus {
+    background: #ffffff;
+    border-color: var(--color-primary-500);
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.12);
+}
+
+[data-theme="light"] .form-input::placeholder {
+    color: #94a3b8;
+}
+
+[data-theme="light"] .search-box {
+    background: #ffffff;
+    border-color: rgba(15, 23, 42, 0.1);
+}
+
+[data-theme="light"] .search-box:focus-within {
+    background: #ffffff;
+    border-color: var(--color-primary-500);
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+[data-theme="light"] .search-box input {
+    color: #0f172a;
+}
+
+[data-theme="light"] .search-box input::placeholder {
+    color: #94a3b8;
+}
+
+[data-theme="light"] .search-box kbd {
+    background: #f1f5f9;
+    border-color: rgba(15, 23, 42, 0.1);
+    color: #64748b;
+}
+
+/* =====================================================
+   Search Input Wrapper - Theme Support
+   ===================================================== */
+[data-theme="light"] .search-input-wrapper {
+    background: #ffffff;
+    border-color: rgba(15, 23, 42, 0.1);
+}
+
+[data-theme="light"] .search-input-wrapper:focus-within {
+    background: #ffffff;
+    border-color: var(--color-primary-500);
+}
+
+[data-theme="light"] .search-input-wrapper input {
+    color: #0f172a;
+}
+
+/* =====================================================
+   Tables - Theme Support
+   ===================================================== */
+[data-theme="light"] .leads-container {
+    background: #ffffff;
+    border-color: rgba(15, 23, 42, 0.08);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+[data-theme="light"] .data-table th {
+    background: #f8fafc;
+    color: #475569;
+    border-bottom-color: rgba(15, 23, 42, 0.08);
+}
+
+[data-theme="light"] .data-table td {
+    border-bottom-color: rgba(15, 23, 42, 0.06);
+}
+
+[data-theme="light"] .data-table tbody tr:hover {
+    background: rgba(99, 102, 241, 0.04);
+}
+
+[data-theme="light"] .table-footer {
+    background: #f8fafc;
+    border-top-color: rgba(15, 23, 42, 0.08);
+}
+
+/* =====================================================
+   Filter Tabs - Theme Support
+   ===================================================== */
+[data-theme="light"] .filter-tabs {
+    background: #ffffff;
+    border-color: rgba(15, 23, 42, 0.1);
+}
+
+[data-theme="light"] .filter-tab {
+    color: #475569;
+}
+
+[data-theme="light"] .filter-tab:hover {
+    color: #0f172a;
+    background: rgba(99, 102, 241, 0.06);
+}
+
+[data-theme="light"] .filter-tab:not(.active) .count {
+    background: #f1f5f9;
+    color: #64748b;
+}
+
+/* =====================================================
+   Dropdowns - Theme Support
+   ===================================================== */
+[data-theme="light"] .dropdown-menu {
+    background: #ffffff;
+    border-color: rgba(15, 23, 42, 0.1);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="light"] .dropdown-item {
+    color: #0f172a;
+}
+
+[data-theme="light"] .dropdown-item:hover {
+    background: rgba(99, 102, 241, 0.08);
+}
+
+/* =====================================================
+   Modals - Theme Support
+   ===================================================== */
+[data-theme="light"] .modal-content {
+    background: #ffffff;
+    border-color: rgba(15, 23, 42, 0.1);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+}
+
+[data-theme="light"] .modal-header {
+    border-bottom-color: rgba(15, 23, 42, 0.08);
+}
+
+[data-theme="light"] .modal-footer {
+    background: #f8fafc;
+    border-top-color: rgba(15, 23, 42, 0.08);
+}
+
+[data-theme="light"] .modal-close {
+    background: #f1f5f9;
+    border-color: rgba(15, 23, 42, 0.1);
+    color: #475569;
+}
+
+[data-theme="light"] .modal-close:hover {
+    background: var(--color-error-500);
+    color: white;
+}
+
+/* =====================================================
+   Badges & Tags - Theme Support
+   ===================================================== */
+[data-theme="light"] .badge-primary {
+    background: rgba(99, 102, 241, 0.12);
+    color: var(--color-primary-600);
+}
+
+[data-theme="light"] .badge-success {
+    background: rgba(16, 185, 129, 0.12);
+    color: #059669;
+}
+
+[data-theme="light"] .badge-warning {
+    background: rgba(245, 158, 11, 0.12);
+    color: #d97706;
+}
+
+[data-theme="light"] .badge-error {
+    background: rgba(239, 68, 68, 0.12);
+    color: #dc2626;
+}
+
+[data-theme="light"] .status-badge {
+    font-weight: 600;
+}
+
+[data-theme="light"] .status-badge.new {
+    background: rgba(59, 130, 246, 0.12);
+    color: #2563eb;
+}
+
+[data-theme="light"] .status-badge.contacted {
+    background: rgba(245, 158, 11, 0.12);
+    color: #d97706;
+}
+
+[data-theme="light"] .status-badge.qualified {
+    background: rgba(139, 92, 246, 0.12);
+    color: #7c3aed;
+}
+
+[data-theme="light"] .status-badge.converted {
+    background: rgba(16, 185, 129, 0.12);
+    color: #059669;
+}
+
+[data-theme="light"] .status-badge.lost {
+    background: rgba(239, 68, 68, 0.12);
+    color: #dc2626;
+}
+
+[data-theme="light"] .source-tag {
+    background: rgba(99, 102, 241, 0.1);
+    color: var(--color-primary-600);
+}
+
+/* =====================================================
+   Toasts - Theme Support
+   ===================================================== */
+[data-theme="light"] .toast {
+    background: #ffffff;
+    border-color: rgba(15, 23, 42, 0.1);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* =====================================================
+   Notification Panel - Theme Support
+   ===================================================== */
+[data-theme="light"] .notification-panel {
+    background: #ffffff;
+    border-color: rgba(15, 23, 42, 0.1);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12);
+}
+
+[data-theme="light"] .notification-item {
+    border-bottom-color: rgba(15, 23, 42, 0.06);
+}
+
+[data-theme="light"] .notification-item:hover {
+    background: rgba(99, 102, 241, 0.04);
+}
+
+[data-theme="light"] .notification-item.unread {
+    background: rgba(99, 102, 241, 0.06);
+}
+
+/* =====================================================
+   Pagination - Theme Support
+   ===================================================== */
+[data-theme="light"] .pagination-btn {
+    background: #ffffff;
+    border-color: rgba(15, 23, 42, 0.1);
+    color: #475569;
+}
+
+[data-theme="light"] .pagination-btn:hover:not(:disabled) {
+    background: rgba(99, 102, 241, 0.08);
+    border-color: rgba(99, 102, 241, 0.3);
+    color: var(--color-primary-600);
+}
+
+/* =====================================================
+   Action Buttons - Theme Support
+   ===================================================== */
+[data-theme="light"] .action-btn {
+    color: #64748b;
+}
+
+[data-theme="light"] .action-btn:hover {
+    background: rgba(15, 23, 42, 0.06);
+}
+
+[data-theme="light"] .action-btn.view:hover {
+    background: rgba(99, 102, 241, 0.1);
+    color: var(--color-primary-600);
+}
+
+[data-theme="light"] .action-btn.edit:hover {
+    background: rgba(245, 158, 11, 0.1);
+    color: #d97706;
+}
+
+[data-theme="light"] .action-btn.delete:hover {
+    background: rgba(239, 68, 68, 0.1);
+    color: #dc2626;
+}
+
+/* =====================================================
+   User Profile - Theme Support
+   ===================================================== */
+[data-theme="light"] .user-profile {
+    background: #f8fafc;
+}
+
+[data-theme="light"] .status-indicator {
+    border-color: #ffffff;
+}
+
+/* =====================================================
+   Code Blocks - Theme Support
+   ===================================================== */
+[data-theme="light"] .code-block {
+    background: #1e293b;
+    color: #e2e8f0;
+}
+
+[data-theme="light"] .code-block pre {
+    background: transparent;
+}
+
+/* =====================================================
+   API Cards - Theme Support
+   ===================================================== */
+[data-theme="light"] .api-card {
+    background: #ffffff;
+    border-color: rgba(15, 23, 42, 0.08);
+}
+
+[data-theme="light"] .api-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* =====================================================
+   Source Cards - Theme Support
+   ===================================================== */
+[data-theme="light"] .source-card {
+    background: #ffffff;
+    border-color: rgba(15, 23, 42, 0.08);
+}
+
+[data-theme="light"] .source-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* =====================================================
+   Scraper Results - Theme Support
+   ===================================================== */
+[data-theme="light"] .scraper-form-card {
+    background: #ffffff;
+}
+
+[data-theme="light"] .scraper-results {
+    background: #ffffff;
+}
+
+/* =====================================================
+   Scrollbar - Theme Support
+   ===================================================== */
+[data-theme="light"] ::-webkit-scrollbar-track {
+    background: #f8fafc;
+}
+
+[data-theme="light"] ::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+}
+
+[data-theme="light"] ::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+}
+
+/* =====================================================
+   Date Filter - Theme Support
+   ===================================================== */
+[data-theme="light"] .date-filter {
+    background: #ffffff;
+    border-color: rgba(15, 23, 42, 0.1);
+}
+
+[data-theme="light"] .filter-btn {
+    color: #475569;
+}
+
+[data-theme="light"] .filter-btn:hover {
+    color: #0f172a;
+}
+
+/* =====================================================
+   View Toggle - Theme Support
+   ===================================================== */
+[data-theme="light"] .view-toggle {
+    background: #ffffff;
+    border-color: rgba(15, 23, 42, 0.1);
+}
+
+[data-theme="light"] .view-btn {
+    color: #64748b;
+}
+
+[data-theme="light"] .view-btn:hover {
+    color: #0f172a;
+}
+
+/* =====================================================
+   Custom Checkbox - Theme Support
+   ===================================================== */
+[data-theme="light"] .custom-checkbox .checkmark {
+    background: #ffffff;
+    border-color: rgba(15, 23, 42, 0.2);
+}
+
+/* =====================================================
+   Sidebar Toggle - Theme Support
+   ===================================================== */
+[data-theme="light"] .sidebar-toggle {
+    background: #f8fafc;
+    border-color: rgba(15, 23, 42, 0.1);
+    color: #64748b;
+}
+
+[data-theme="light"] .sidebar-toggle:hover {
+    background: rgba(99, 102, 241, 0.1);
+    color: var(--color-primary-600);
+}
+
+/* =====================================================
+   Mobile Menu Button - Theme Support
+   ===================================================== */
+[data-theme="light"] .mobile-menu-btn {
+    background: #ffffff;
+    border-color: rgba(15, 23, 42, 0.1);
+    color: #475569;
+}
+
+/* =====================================================
+   Get Leads Button - Special Styling
+   ===================================================== */
+.get-leads-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 20px;
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.25);
+    position: relative;
+    overflow: hidden;
+}
+
+.get-leads-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(255, 255, 255, 0.15), transparent);
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+.get-leads-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(16, 185, 129, 0.35);
+}
+
+.get-leads-btn:hover::before {
+    opacity: 1;
+}
+
+.get-leads-btn i {
+    font-size: 16px;
+}
+
+/* Pulse animation for Get Leads button */
+.get-leads-btn .pulse-dot {
+    width: 8px;
+    height: 8px;
+    background: #ffffff;
+    border-radius: 50%;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 0.6;
+        transform: scale(1.2);
+    }
+}
+
+/* =====================================================
+   Theme Toggle Button Enhancement
+   ===================================================== */
+#themeToggle {
+    position: relative;
+    overflow: hidden;
+}
+
+#themeToggle i {
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+[data-theme="dark"] #themeToggle i {
+    color: #fbbf24;
+}
+
+[data-theme="light"] #themeToggle i {
+    color: #6366f1;
+}
+
+#themeToggle:hover i {
+    transform: rotate(15deg);
+}
