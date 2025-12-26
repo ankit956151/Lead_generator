@@ -131,7 +131,53 @@ If you prefer manual setup:
 mysql -u root -p < database/schema.sql
 ```
 
-## 📊 Database Schema
+## � The First-Time Upload Process
+
+Follow these steps in order to initialize your project and push it to the public repository:
+
+1. **Initialize the local directory as a Git repository:**
+   ```bash
+   git init
+   ```
+
+2. **Add all files to the staging area:**
+   ```bash
+   git add .
+   ```
+
+3. **Commit the files to your local repository:**
+   ```bash
+   git commit -m "Initial commit: Lead Generator project setup"
+   ```
+
+4. **Rename your default branch to 'main':**
+   ```bash
+   git branch -M main
+   ```
+
+5. **Add the remote repository URL:**
+   ```bash
+   git remote add origin https://github.com/ankit956151/Lead_generator.git
+   ```
+
+6. **Push your changes to GitHub:**
+   ```bash
+   git push -u origin main
+   ```
+
+## 🔑 Troubleshooting Authentication
+
+If you are prompted for a username and password and the login fails:
+
+1. Go to **GitHub Settings > Developer Settings > Personal Access Tokens > Tokens (classic)**
+
+2. Generate a new token with the **repo** scope selected
+
+3. Copy the token
+
+4. When the terminal asks for your "Password," paste the token instead
+
+## �📊 Database Schema
 
 ### Tables
 - **users** - Admin users
